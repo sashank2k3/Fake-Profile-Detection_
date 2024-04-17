@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import joblib
 from apify_client import ApifyClient
-model = joblib.load("classifier.pkl")
+model = joblib.load("/classifier.pkl")
 client = ApifyClient("apify_api_nscRkHOyMh3mytIWftXpHpZlIzBhgF4mZyPV")
 st.title("Fake Instagram Profile Detection")
 st.write("Plaese provide instagram account details you would like to predict")
