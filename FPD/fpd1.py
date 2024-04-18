@@ -6,7 +6,7 @@ from apify_client import ApifyClient
 model = joblib.load("FPD/classifier.pkl")
 client = ApifyClient("apify_api_nscRkHOyMh3mytIWftXpHpZlIzBhgF4mZyPV")
 st.title("Fake Instagram Profile Detection")
-st.write("Plaese provide instagram account details you would like to predict")
+st.write("Please provide instagram account details you would like to predict")
 n = st.text_input("Enter username ")
 run_input = { "usernames": [n] }
 run = client.actor("dSCLg0C3YEZ83HzYX").call(run_input=run_input)
