@@ -17,6 +17,7 @@ for item in m.iterate_items():
         followsCount = item.get('followsCount')
         private=item.get('private')
         verified=item.get('verified')
+        username=item.get('username')
 
 def predictor(postsCount,followersCount,followsCount,private,verified):
     prediction = model.predict([[postsCount,followersCount,followsCount,private,verified]])
@@ -31,7 +32,9 @@ if st.button("Predict"):
     st.write("The number of following : " ,followsCount)
     st.write("Private : " ,private)
     st.write("Verified : " ,verified)
-    if result==0:
+    if username==None:
+        st.error("The Account Doesn't Exist please check given username")
+    elif result==0:
         st.error("The Account is Likely to be Fake ")
     else:
         st.success("The Account is Likely to be Real")
