@@ -46,4 +46,4 @@ if st.button("Predict"):
     if result==0:
         st.success("The Account is Likely to be Fake ")
     else:
-        st.success("The Account is Likely to be Real")
+        st.error("The Account is Likely to be Real")
