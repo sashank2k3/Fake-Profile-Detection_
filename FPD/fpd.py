@@ -44,6 +44,6 @@ if st.button("Predict"):
     st.write("Private : " ,private)
     st.write("Verified : " ,verified)
     if result==0:
-        st.success("The Account is Likely to be Fake ")
+        st.error("The Account is Likely to be Fake ")
     else:
-        st.error("The Account is Likely to be Real")
+        st.success("The Account is Likely to be Real")
